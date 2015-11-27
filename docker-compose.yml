@@ -13,7 +13,8 @@ logstash:
   links:
     - elasticsearch
 kibana:
-  build: kibana/
+  image: kibana:latest
+  command: kibana
   volumes:
     - ./kibana/config/kibana.yml:/opt/kibana/config/kibana.yml
   ports:
